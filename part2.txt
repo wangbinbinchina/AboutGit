@@ -1,0 +1,22 @@
+part 2 使用Repo管理个人Git仓库
+
+实现步骤：
+1 建立一个管理多仓配置的工程，如工程名 manifest，并推送到远程服务器
+2 新建default.xml文件推送到远程服务器，将需要配置的仓库管理起来
+  参考 https://github.com/wangbinbinchina/manifest/blob/master/default.xml
+3 本地拉取代码
+  repo init -u git@github.com:wangbinbinchina/manifest.git
+  repo init
+  
+关于default.xml的格式说明
+主要有 remote default project标签
+->remote
+  fetch: 服务器地址,可以使用 .. 代替
+  name： 默认的remote name，就是git push origin里面那个origin
+  review： 指定Gerrit的服务器名，用于repo upload操作。如果没有指定，则repo upload没有效果
+->default
+  remote 远程服务器的名字
+  revision  指定默认分支
+->project
+  path 是把代码下载下来后在本地的相对路径
+  name 是git在服务器上的相对路径
