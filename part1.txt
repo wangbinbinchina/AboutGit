@@ -1,0 +1,17 @@
+Repo For Windows的安装
+
+Git与Repo的关系
+  Git管理单独的模块，而repo管理所有的Git库，将多个Git库组合在一起，形成一个完整的大版本
+
+1 repo for windows的安装
+  安装指导参考 https://github.com/esrlabs/git-repo
+
+2 注意点： 
+2.1 Python的版本要低于2.7 (百度上部分git-repo支持Python3)
+    查看Python版本号： python -V
+    python官网：  https://www.python.org/
+2.2 Git的版本请在官网下载较新版本，如 2.23.0
+    查看Git版本号：  git --version
+    git官网：  https://gitforwindows.org/
+    git 版本号较老时可能的报错： https://github.com/esrlabs/git-repo/issues/70
+2.3 检查是否安装成功，新建文件夹后，在目录中 repo init，查看是否能拉下repo配置仓
